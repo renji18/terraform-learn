@@ -231,7 +231,6 @@ resource "aws_lb_target_group_attachment" "app" {
 
 
 # Internet-facing Application Load Balancer.
-
 resource "aws_lb" "main" {
   name               = "${var.project_name}-alb"
   internal           = false
@@ -246,7 +245,6 @@ resource "aws_lb" "main" {
 
 
 # Public HTTP listener.
-
 resource "aws_lb_listener" "http" {
   load_balancer_arn = aws_lb.main.arn
   port              = 80
